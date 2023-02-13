@@ -18,11 +18,9 @@ st.title('OLYMPIC HISTORY DASHBOARD')
 st.header('Created By Fahad Ahmed - Final Assignment')
 
 
-file1 = r'C:\Users\dell\Desktop\Karachi.AI\Python\CLASS content\athlete_events.csv'
-file2 = r'C:\Users\dell\Desktop\Karachi.AI\Python\CLASS content\noc_regions.csv'
 #Read the file
-df1=pd.read_csv(file1)
-df2=pd.read_csv(file2)
+df1=pd.read_csv(r'C:\Users\dell\Desktop\Karachi.AI\Python\CLASS content\athlete_events.csv')
+df2=pd.read_csv(r'C:\Users\dell\Desktop\Karachi.AI\Python\CLASS content\noc_regions.csv')
 df2.rename(columns={"region": "Region"}, inplace=True)
 df=pd.merge(df1, df2, on="NOC", how="left")
 df=df.drop(['ID','notes'],axis=1)
