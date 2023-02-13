@@ -19,8 +19,8 @@ st.header('Created By Fahad Ahmed - Final Assignment')
 
 
 #Read the file
-df1=pd.read_csv('C:\\Users\\dell\\Desktop\\Karachi.AI\\Python\\CLASS content\\athlete_events.csv')
-df2=pd.read_csv('C:\\Users\\dell\\Desktop\\Karachi.AI\\Python\\CLASS content\\noc_regions.csv')
+df1=pd.read_csv('athlete_events.csv')
+df2=pd.read_csv('noc_regions.csv')
 df2.rename(columns={"region": "Region"}, inplace=True)
 df=pd.merge(df1, df2, on="NOC", how="left")
 df=df.drop(['ID','notes'],axis=1)
